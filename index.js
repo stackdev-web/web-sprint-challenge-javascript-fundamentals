@@ -73,22 +73,8 @@ const zooAnimals = [
       })
   return displayNames;
 }
-console.log(animalNames(zooAnimals));
+console.log('Request 1 .forEach:', animalNames());
 
-
-
-  // zooAnimals.forEach(function(item, index) {
-  //   console.log(item.animal_name);
-  //   console.log(index);
-  // })
-
-
-
-
-  // const newArray = [];
-// array.forEach(function(item){
-//   newArray.push(item.key);
-// });
 
 
 
@@ -98,11 +84,24 @@ console.log(animalNames(zooAnimals));
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+
+  
+  function lowerCaseNames(){
+  const lowerCaseAnimals = [];
+    zooAnimals.map(function(item){
+    lowerCaseAnimals.push(item.animal_name.toLowerCase()); 
+
+    })
+    return lowerCaseAnimals;
   }
-  
-  
+
+console.log('Request 2 .map:', lowerCaseNames());
+
+
+
+
+
+
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
